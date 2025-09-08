@@ -1,4 +1,8 @@
-import collections
+try:
+    from collections.abc import MutableSet
+except ImportError:
+    from collections import MutableSet
+
 
 class OrderedSet(collections.MutableSet):
     """
